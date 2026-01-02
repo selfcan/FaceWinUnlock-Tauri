@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "facewinunlock-tauri",
+  "version": "0.1.0",
+  "identifier": "com.administrator.facewinunlock-tauri",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "facewinunlock-tauri",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "resources": {
+      "E:/Code/Tauri/OpenSource/FaceWinUnlock-Tauri/Server/build/FaceWinUnlock-Tauri.dll": "resources/FaceWinUnlock-Tauri.dll",
+      "E:/Code/Rust/3rdparty/opencv/install/x64/vc17/bin/opencv_world4120.dll": "opencv_world4120.dll"
+    }
+  }
+}
